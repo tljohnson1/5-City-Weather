@@ -3,9 +3,9 @@ $(function() {
    $("#compareBtn").click(compareBtnClick);
    $("#city1").on("input", cityInput);
    $("#city2").on("input", cityInput);
-   $("#city3").on("input", cityInput2);
-   $("#city4").on("input", cityInput2);
-   $("#city5").on("input", cityInput2); 
+   $("#city3").on("input", cityInput);
+   $("#city4").on("input", cityInput);
+   $("#city5").on("input", cityInput); 
 });
 
 // Called when city input values change
@@ -23,18 +23,6 @@ function cityInput(e) {
    }
 }
 
-function cityInput2(e) {
-   const cityId = e.target.id;
-   const city = $(`#${cityId}`).val().trim();
-   
-   // Show no error message if cities 3-5 are empty. 
-   /* if (city.length === 0) {
-      // showElement("error-value-" + cityId);      
-   }
-   else {
-      hideElement("error-value-" + cityId);
-   } */
-}
 
 // Compare button is clicked
 function compareBtnClick() {
@@ -63,7 +51,7 @@ function compareBtnClick() {
    }
 
    // Ensure at least 2 city names provided
-   if (city1.length > 0 && city2.length > 0) {
+   if (city1.length > 0 && city2.length > 0 && city3.length > 0 && city4.length > 0 && city5.length > 0) {
       showElement("forecast");
       hideElement("error-loading-city1");
       hideElement("error-loading-city2");
