@@ -62,8 +62,8 @@ function compareBtnClick() {
       showElement("error-value-city5");
    }
 
-   // Ensure both city names provided
-   if (city1.length > 0 && city2.length > 0 && city4.length > 0 && city5.length > 0 && city3.length > 0) {
+   // Ensure at least 2 city names provided
+   if (city1.length > 0 && city2.length > 0) {
       showElement("forecast");
       hideElement("error-loading-city1");
       hideElement("error-loading-city2");
